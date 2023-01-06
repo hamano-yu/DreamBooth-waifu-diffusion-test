@@ -1,4 +1,6 @@
-# waifu-v1-4使ってみたメモ.
+# DreamBoothとwaifu-v1-4使ってみたメモ.
+
+https://qiita.com/kitsume/items/d1a27316504f83b84bea
 
 ## 推論に必要なライブラリ
 ```
