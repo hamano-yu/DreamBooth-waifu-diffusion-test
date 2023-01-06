@@ -1,5 +1,5 @@
 export MODEL_NAME="CompVis/stable-diffusion-v1-4"
-export INSTANCE_DIR="instance-images/dog"
+export INSTANCE_DIR="input_images/instance_images/dog"
 export OUTPUT_DIR="model/dog"
 
 accelerate launch train_dreambooth.py \
