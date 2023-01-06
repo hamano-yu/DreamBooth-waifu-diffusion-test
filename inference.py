@@ -8,7 +8,7 @@ pipe = StableDiffusionPipeline.from_pretrained(
 ).to('cuda')
 
 pipe.enable_attention_slicing() 
-pipe.enable_sequential_cpu_offload() 
+pipe.enable_sequential_cpu_offload()
 
 prompt = "masterpiece, best quality, 1girl, green hair, sweater, looking at viewer, upper body, beanie, outdoors, watercolor, night, turtleneck"
 negative_prompt = "nsfw, owres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry,missing fingers,bad hands,missing arms, long neck, Humpbacked"

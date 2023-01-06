@@ -1,3 +1,6 @@
 images*
 .venv*
 *.whl
+*.png
+*.jpg
+model*
