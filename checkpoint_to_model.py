@@ -1,9 +1,13 @@
+"""
+reference from https://huggingface.co/docs/diffusers/training/dreambooth
+
+"""
+
 from accelerate import Accelerator
 from diffusers import DiffusionPipeline
 
 # Load the pipeline with the same arguments (model, revision) that were used for training
 model_id = "hakurei/waifu-diffusion"
-#model_id = "model/okoma2"
 pipeline = DiffusionPipeline.from_pretrained(model_id)
 accelerator = Accelerator()
 
@@ -11,8 +15,7 @@ accelerator = Accelerator()
 #unet, text_encoder = accelerator.prepare(pipeline.unet, pipeline.text_encoder)
 
 # Restore state from a checkpoint path. You have to use the absolute path here.
-print("load checkpoint")
-model_path = "~/Desktop/projects/stable_diffusion/waifu-diffusion/model/okoma/checkpoint-200"
+model_path = "model/dog/checkpoint-200"
 accelerator.load_state(model_path)
 
 # Rebuild the pipeline with the unwrapped models (assignment to .unet and .text_encoder should work too)

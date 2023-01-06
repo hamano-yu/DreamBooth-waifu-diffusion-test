@@ -1,3 +1,8 @@
+"""
+reference from diffusers/examples/train_dreambooth.py 
+
+"""
+
 import argparse
 import hashlib
 import itertools

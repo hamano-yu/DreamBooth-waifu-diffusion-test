@@ -2,8 +2,10 @@ import torch
 from torch import autocast
 from diffusers import StableDiffusionPipeline
 
+MODELID = 'CompVis/stable-diffusion-v1-4'
+MODELID = 'hakurei/waifu-diffusion'
 pipe = StableDiffusionPipeline.from_pretrained(
-    'hakurei/waifu-diffusion',
+    MODELID,
     torch_dtype=torch.float16
 ).to('cuda')
 

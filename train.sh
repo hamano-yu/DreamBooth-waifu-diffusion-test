@@ -1,12 +1,12 @@
-export MODEL_NAME="hakurei/waifu-diffusion"
-export INSTANCE_DIR="instance-images/okoma-few"
-export OUTPUT_DIR="model/okoma2"
+export MODEL_NAME="CompVis/stable-diffusion-v1-4"
+export INSTANCE_DIR="instance-images/dog"
+export OUTPUT_DIR="model/dog"
 
 accelerate launch train_dreambooth.py \
   --pretrained_model_name_or_path=$MODEL_NAME  \
   --instance_data_dir=$INSTANCE_DIR \
   --output_dir=$OUTPUT_DIR \
-  --instance_prompt="okoma" \
+  --instance_prompt="a photo of sks dog" \
   --resolution=512 \
   --train_batch_size=1 \
   --sample_batch_size=1 \
@@ -14,6 +14,6 @@ accelerate launch train_dreambooth.py \
   --learning_rate=5e-6 \
   --lr_scheduler="constant" \
   --lr_warmup_steps=0 \
-  --max_train_steps=300 \
+  --max_train_steps=400 \
   --mixed_precision=fp16 \
-  --checkpointing_steps=100
+  --checkpointing_steps=200

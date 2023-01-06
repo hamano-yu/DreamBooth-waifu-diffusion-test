@@ -1,6 +1,6 @@
 # waifu-v1-4使ってみたメモ.
 
-## 最低限推論環境ライブラリ
+## 推論に必要なライブラリ
 ```
 pip install git+https://github.com/huggingface/diffusers 
 pip install torch==1.13.0 torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
@@ -9,9 +9,6 @@ pip install accelerate
 ```
 
 推論
-```
-python waifu1-4.py
-```
 ※ GTX 3070 (VRAM 8GB)でも、２つのオプションをいれることで、768×1024の推論が可能. (5〜6GB程度の使用率.)
 ```
 pipe.enable_attention_slicing() 
